@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
+
+
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+
+.header{
+ background-color: #222;
+ height: 52px;
+ padding: 0 112px;
+
+}
+
+
+
+/* ログイン前画面 */
+.navbar-nav1 {
+ color: #FFFFFF;
+ font-size: 20px;
+}
+
+a {
+  color: #999999;
+}
+
+.container {
+ margin-right: auto;
+ margin-left: auto;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+.text {
+margin: 0 50px;
+
+}
+
+
+.btn-wrapper {
+margin: 0 140px;
+}
+
+
+p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.footer{
+text-align: right;
+margin-right: 220px;
+}
+
+
+
+/* log inページ */
+.loginpage{
+ margin: 0 110px;
+}
+
+.field {
+margin-bottom: 10px;
+}
+
+.actions {
+ margin-bottom: 10px;
+}
+
+
+.create-btn{
+margin-top: 5px;
+}
+
+
+.notice {
+ color: #00CC00;
+}

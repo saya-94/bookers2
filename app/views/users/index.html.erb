@@ -1,0 +1,34 @@
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"><%= render 'users/input', user: current_user %></div>
+
+
+    <div class="col-sm-9">
+      <h2>Books</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+             <tr>
+             <th class="box"><strong>image</strong></th>
+             <th class="box"><strong>name</strong></th>
+             <th class="box"></th>
+             <th colspan = "3"></th>
+            </tr>
+          </thead>
+          <tbody>
+<% @users.each do |user| %>
+            <tr>
+              <td><%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "mini_no_image.jpg" %></td>
+              <td><%= user.name %></td>
+              <td><%= link_to "Show", user_path(user.id)%></td>
+            </tr>
+<% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+<%= render 'books/footer_list' %>
+</body>

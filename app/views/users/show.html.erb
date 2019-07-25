@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"><%= render 'users/input', user: @user %></div>
+
+
+    <div class="col-sm-9">
+      <h2>Books</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+             <tr>
+             <th class="box"></th>
+             <th class="box"><strong>Title</strong></th>
+             <th class="box"><strong>Opinion</strong></th>
+             <th colspan = "3"></th>
+            </tr>
+          </thead>
+          <tbody>
+<% @book.each do |book| %>
+            <tr>
+              <td>
+                <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></td>
+              <td><%= link_to book.title, book_path(book.id)%></td>
+              <td><%= book.body %></td>
+            </tr>
+<% end %>
+          </tbody>
+        </table>
+
+    </div>
+
+
+    </div>
+    </div>
+
+<%= render 'books/footer_list' %>

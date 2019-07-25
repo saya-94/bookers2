@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+
+
+      <h2>Editing Book</h2>
+
+      <%= form_for @book do |b| %>
+
+        <div class="form">
+          <p class="newbook-title"><strong>Title</strong></p>
+          <%= b.text_field :title, class:"col-xs-12" %>
+        </div>
+
+        <div class="form ">
+          <p class="newbook-body"><strong>Opinion</strong></p>
+          <%= b.text_area :body, class:"col-xs-12"%>
+        </div>
+
+        <div class="create-btn">
+          <%= b.submit "Update Book", class: "btn btn-primary btn-block" %>
+        </div>
+      <% end %>
+        <%= link_to "Show", book_path %>
+        |
+        <%= link_to "Back", books_path %>
+    </div>
+  </div>
+</div>
+
+<%= render 'books/footer_list' %>

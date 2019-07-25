@@ -1,0 +1,35 @@
+<body>
+  <div class="container">
+    <div class="col-sm-3">
+      <row>
+        <h2>User info</h2>
+
+  <% if @user.errors.any? %>
+        <%= @user.errors.count %>error prohibited this obj from being saved:
+        <% @user.errors.full_messages.each do |message| %>
+        <%= message %>
+    <% end %>
+  <% end %>
+
+            <%= form_for(@user) do |f| %>
+
+              <p><strong>Name</strong></p>
+              <%= f.text_field :name %>
+
+              <p><strong>Image</strong></p>
+              <%= f.attachment_field :profile_image %>
+
+              <p><strong>Introduction</strong></p>
+              <%= f.text_area :introduction %>
+
+              <%= f.submit 'Update User' %>
+
+            <% end %>
+      </row>
+    </div>
+  </div>
+
+<%= render 'books/footer_list' %>
+
+</body>
+
